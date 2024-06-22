@@ -1,0 +1,56 @@
+[gd_scene load_steps=3 format=3 uid="uid://cynmkbo0ddpcq"]
+
+[ext_resource type="FontFile" uid="uid://ccf6ibfp0r6x" path="res://fonts/ThatNogoFontCasual.ttf" id="1_vj2fp"]
+[ext_resource type="Script" path="res://scripts/button-gameover-playagain.gd" id="2_mlqqt"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0.486861, 0.0656578, 0.301274, 1)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -321.0
+offset_top = 39.0
+offset_right = 352.0
+offset_bottom = 171.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 0, 0.25098, 1)
+theme_override_colors/font_shadow_color = Color(0.631283, 0.277837, 0.273039, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 7
+theme_override_constants/outline_size = 7
+theme_override_constants/shadow_outline_size = 7
+theme_override_constants/line_spacing = 6
+theme_override_fonts/font = ExtResource("1_vj2fp")
+theme_override_font_sizes/font_size = 120
+text = "GAME      OVER"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 387.0
+offset_top = 387.0
+offset_right = 811.0
+offset_bottom = 546.0
+theme_override_fonts/font = ExtResource("1_vj2fp")
+theme_override_font_sizes/font_size = 80
+text = "PLAY AGAIN"
+flat = true
+script = ExtResource("2_mlqqt")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

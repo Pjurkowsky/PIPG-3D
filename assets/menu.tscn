@@ -1,0 +1,74 @@
+[gd_scene load_steps=4 format=3 uid="uid://bu0nehaxotvg3"]
+
+[ext_resource type="FontFile" uid="uid://ccf6ibfp0r6x" path="res://fonts/ThatNogoFontCasual.ttf" id="1_137tg"]
+[ext_resource type="Script" path="res://scripts/button-title-play.gd" id="2_4db3q"]
+
+[sub_resource type="Theme" id="Theme_6mdh8"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 1.0
+offset_right = 1153.0
+offset_bottom = 648.0
+theme = SubResource("Theme_6mdh8")
+color = Color(0.6, 1, 1, 1)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -239.0
+offset_top = 44.0
+offset_right = 239.0
+offset_bottom = 165.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.662959, 0.212388, 0.538932, 1)
+theme_override_colors/font_shadow_color = Color(0.444971, 0.171609, 0.45051, 1)
+theme_override_colors/font_outline_color = Color(0.493339, 0.19365, 0.55562, 1)
+theme_override_constants/shadow_offset_x = 9
+theme_override_constants/shadow_offset_y = 7
+theme_override_constants/outline_size = 10
+theme_override_constants/shadow_outline_size = 9
+theme_override_fonts/font = ExtResource("1_137tg")
+theme_override_font_sizes/font_size = 120
+text = "GRA          3D"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="button-title-play" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -128.0
+offset_top = -257.0
+offset_right = 138.0
+offset_bottom = -121.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.562514, 0.417998, 0.650265, 1)
+theme_override_colors/font_pressed_color = Color(0.689854, 0.137996, 0.575706, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.765208, 0.307449, 0.673058, 1)
+theme_override_constants/outline_size = 8
+theme_override_constants/h_separation = 7
+theme_override_constants/icon_max_width = 7
+theme_override_fonts/font = ExtResource("1_137tg")
+theme_override_font_sizes/font_size = 80
+text = "START "
+flat = true
+script = ExtResource("2_4db3q")
+
+[connection signal="pressed" from="button-title-play" to="button-title-play" method="_on_pressed"]
